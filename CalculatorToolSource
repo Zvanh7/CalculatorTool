@@ -1,0 +1,82 @@
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    double number_1;
+    double number_2;
+    short operation;
+
+    cout << "1 - Addition" << endl
+        << "2 - Subtraction" << endl
+        << "3 - Multiplication" << endl
+        << "4 - Division"
+        << endl;
+
+    cout << "Please select an operation: " << endl << endl;
+    cin >> operation;
+
+
+    switch (operation) {
+    case 1:
+        cout << "You selected Addition!" << endl << endl;
+        cout << "Enter a Number: ";
+        cin >> number_1;
+        cout << "Enter a Number: ";
+        cin >> number_2;
+        cout << number_1 + number_2;
+        break;
+
+    case 2:
+        cout << "You selected Subtraction!" << endl << endl;
+        cout << "Enter a Number: ";
+        cin >> number_1;
+        cout << "Enter a Number: ";
+        cin >> number_2;
+        if (number_1 >= number_2)
+            cout << number_1 - number_2 << endl << endl;
+        else if (number_2 > number_1)
+            cout << number_2 - number_1 << endl << endl;
+        break;
+
+    case 3:
+        cout << "You selected Multiplication!" << endl << endl;
+        cout << "Enter a Number: ";
+        cin >> number_1;
+        cout << "Enter a Number: ";
+        cin >> number_2;
+        cout << number_1 * number_2 << endl << endl;
+        break;
+
+    case 4:
+        cout << "You selected Division!" << endl << endl;
+        cout << "Enter a Number: ";
+        cin >> number_1;
+        cout << "Enter a Number: ";
+        cin >> number_2;
+        if (number_1 >= number_2)
+            cout << number_1 / number_2 << endl << endl;
+        else if (number_2 > number_1)
+            cout << number_2 / number_1 << endl;
+        break;
+    default:
+        cout << "Invalid Operator!";
+    }
+
+    cout << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "Thanks for using Evan's Calculator! Do you wish to close the calculator? 1/2: "
+        << endl
+        << "1 - Y:" << endl
+        << "2 - N:";
+
+    string close_prompt;
+    cin >> close_prompt;
+
+    return 0;
+}
